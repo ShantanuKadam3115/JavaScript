@@ -20,14 +20,17 @@ user.id = 43762199
 user.name = "Shantanu"
 user.isMarried = false
 
-const character ={
+let character ={
     name : "Parzival",
     id : 416,
     isIGL : false
 }
 
+character = {
+    gun : "m4"
+}
 // const combined = Object.assign({},user, character) //{ id: 416, name: 'Parzival', isMarried: false, isIGL: false } not widely used
-const combined = {...user, ...character} //{ id: 416, name: 'Parzival', isMarried: false, isIGL: false }spread, widely used
+//const combined = {...user, ...character} //{ id: 416, name: 'Parzival', isMarried: false, isIGL: false }spread, widely used
 
 //object.keys(user) and object.values(user) for all the keys and values
 
@@ -35,6 +38,6 @@ const combined = {...user, ...character} //{ id: 416, name: 'Parzival', isMarrie
 
 //destructioring
 
-const {isIGL : ii } = character //using  ii == character.isIGL
+//const {isIGL : ii } = character //using  ii == character.isIGL
 
-console.log(ii) 
+console.log(character) 
