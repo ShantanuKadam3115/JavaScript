@@ -1,7 +1,7 @@
 let stringNumber = "45"
 let intNumber = Number(stringNumber)
 
-//console.table([intNumber, typeof(intNumber)]) // 45 , number
+// console.table([intNumber, typeof(intNumber)]) // 45 , number
 
 let trial = 45
 let stringTrial = String(trial)  //45 , string
@@ -12,7 +12,7 @@ let stringTrial = String(trial)  //45 , string
 let x = 0
 let boolx = Boolean(x)  //45 , string
 
-console.table([boolx, typeof(boolx)])
+// console.table([boolx, typeof(boolx)]) 
 
 
 /*
@@ -36,4 +36,23 @@ Below are the results of things I tried to convert to Boolean
 shantanu -> true , boolean
 "" -> false , boolean
 
+*/
+
+// *********************************Operations***************************************
+
+let num1 = 100
+
+// console.table([num1++ , ++num1]) // 100, 102
+
+// *************************************Conversions***********************************
+
+console.log(null == 0) //false
+console.log(null <= 0) //true 
+console.log(null >= 0) //true
+console.log(null > 0) //false
+console.log(null > 0) //false
+console.log(undefined > 0) //false
+
+/*
+This is because == and >,< opertators work differently . Avoid these kind of comparisions
 */
