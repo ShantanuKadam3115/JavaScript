@@ -46,15 +46,20 @@ userBooks = books.filter((val)=>{
 
 //Maps
 
+
+// let newNums = nums.map((val)=> val + 10)
+// newNums = nums.map((val)=> val*10).map((num)=> num+1)
+// newNums = nums.map((val)=> val*10).map((num)=> num+1).filter((i) => i > 40)
+
+// console.log(newNums);
+
+//Reduce
+
 const nums =[1,2,3,4,5,6,7,8,9]
 
-let newNums = nums.map((val)=> val + 10)
-
-newNums = nums.map((val)=> val*10).map((num)=> num+1)
-newNums = nums.map((val)=> val*10).map((num)=> num+1).filter((i) => i > 40)
-
+const myTotal = nums.reduce( (acc , curr) => {
+    return acc + curr
+}, 0 )
 
 
-console.log(newNums);
-
-  
+console.log(myTotal)
