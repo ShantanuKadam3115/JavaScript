@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API requests</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <p>
+        <pre>
+            Value	State	Description
+                0	UNSENT	Client has been created. open() not called yet.
+                1	OPENED	open() has been called.
+                2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+                3	LOADING	Downloading; responseText holds partial data.
+                4	DONE	The operation is complete.
+        </pre>
+    </p>
+    <div style="display: flex;" class="card">
+        <div style=" text-align: end; padding: 20px;"  class="pic">
+            <img style="width: 55%;" src="" alt="github DP" class="profilePic">
+        </div>
+
+        <div style="text-align: left;" class="info">
+            <p style="font-size: xx-large;">
+                Name : Shantanu Kadam <br>
+                Age : 23 <br>
+                Bike : RE Continental GT 650
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+
+    // const dp = document.querySelector('img')
+    // console.log(dp.src)
+
+    const xhr = new XMLHttpRequest();
+    const requestUrl = 'https://api.github.com/users/shantanukadam3115'
+    const dp = document.querySelector('img')
+    
+    let dpUrl 
+    xhr.open('GET' , requestUrl)
+
+    xhr.onreadystatechange = function (){
+
+        const data = JSON.parse(this.responseText);
+
+        if (xhr.readyState === 4) {
+            console.log(data.name)
+            console.log(data)
+            dpUrl = data.avatar_url            
+            dp.src = dpUrl
+        }
+        // console.log(dpUrl)
+    }
+    xhr.send()
+    
+    console.log(dp.src)
+    
+    
+</script>
+</html>
